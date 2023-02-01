@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@media print {
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px;
+}
+
+/* I feel that display: flex is good for this case since some sections have differing 
+   columns so you don't have to take that into account since you use width:... for c1 and c2 */
+section {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+/* Clear floats after the columns */
+/* not needed if we use display flex, https://www.w3schools.com/howto/howto_css_two_columns.asp
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+*/
+
+header {
+    text-align: center;
+    display: flex;
+}
+
+/* Style the footer */
+footer {
+    background-color: #A39A92;
+    padding: 10px;
+    text-align: center;
+    color: #483D3F;
+;
+}
+
+body {
+    background-color: #dbaa9b;
+    color: #A39A92;
+}
+
+h1,h2 {
+    color: #483D3F;
+    flex: 1;
+}
+
+.sec {  /* for section titles*/ 
+    text-align: center;
+    font-size:16pt;
+    color: #483D3F;
+    flex: 1; 
+    margin-right: 2rem;
+    font-weight: bold;
+} 
+
+/* ensures that the left margin keeps the same width*/
+section > .sec, section > .le {
+    min-width: 2rem; 
+    max-width: 2rem;
+}
+
+div{
+    width: 100%;
+    font-size: 12pt;
+    background-color: #f6d2c3;
+    color: #483D3F;
+    margin-bottom: 5px;
+}
+
+span {
+    font-size: 12pt;
+    /*--background-color: #F4EBD9;-*/
+    color: #483D3F;
+    margin-bottom: 5px;
+}
+
+div.le, span.le {
+    float: left;
+    width: 15%;
+}
+div.c1, span.c1  {
+    float: left;
+    width: 40%;
+    font-weight: bold;
+}
+div.c2, span.c2 {
+    float: left;
+    width: 40%;
+}
+div.c3, span.c3 {
+    float: left;
+    width: 10%;
+}
+div.re, span.re {
+    /* float: left; this float messes with the alignment of c1 and c2, a little confused on the desired look thought */
+    display: flex;
+    text-align: right;
+    float: right;
+    align-items: center;
+}
+
+.skill {
+    float: left;
+    width: 60%; 
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  section { /* handles being responsive when using display:flex, content still overlaps tho so this would need to be looked into*/
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Medical History</h1>
+        </div>             
+    </header>
+
+    <section>
+        <div>  
+            <div class="sec"> Contact Info </div>
+
+                    <div>
+                        <span class="c1"> Name: </span> 
+                        <span class="c3"> John Smith </span> 
+                        <br/>
+
+                    </div>
+
+                
+                    <div>
+                        <span class="c1"> Phone: </span> 
+                        <span class="c3"> 123-456-6789 </span> 
+                        <br/>
+
+                    </div>
+
+                    <div>
+                        <span class="c1"> Email: </span> 
+                        <span class="c3"> john.smith@stevens.edu </span>   
+                    </div>      
+        
+        </div>    
+    </section>
+
+    <section>
+        <div>
+            
+            <div class="sec"> Bloodwork </div>
+                <div>
+                    <span class="c1"> Date: </span> 
+                    <span class="c3"> 03/04/22 </span>
+                    <span class="c3"> 07/20/22 </span> 
+                    <span class="c3"> 11/09/22 </span> 
+
+                    
+                </div>
+                <div>
+                    <span class="c1"> Weight:</span> 
+                    <span class="c3"> 240 </span> 
+                    <span class="c3"> 208.3 </span> 
+                    <span class="c3"> 211 </span> 
+
+                    
+
+                </div>
+                <div>
+                    <span class="c1"> BP: </span> 
+                    <span class="c3"> 132/83 </span> 
+                    <span class="c3"> 132/83 </span>
+                    <span class="c3"> 122/79 </span> 
+                </div>
+
+                <div>
+                    <span class="c1">Cholestrol</span>
+                    <span class="c3">233</span>
+                    <span class="c3">112</span>
+                    <span class="c3">107</span>
+
+                </div>
+                <div>
+                    <span class="c1">HDL</span>
+                    <span class="c3">41</span>
+                    <span class="c3">42</span>
+                    <span class="c3">39</span>
+                </div>
+                <div>
+                    <span class="c1">LDL</span>
+                    <span class="c3">146</span>
+                    <span class="c3">53</span>
+                    <span class="c3">49</span>
+                </div>
+                <div>
+                    <span class="c1">A1C</span>
+                    <span class="c3">6</span>
+                    <span class="c3">5.4</span>
+                    <span class="c3">5.2</span>
+
+                </div>
+                <div>
+                    <span class="c1">Triglycerides</span>
+                    <span class="c3">231</span>
+                    <span class="c3">91</span>
+                    <span class="c3">67</span>
+
+                </div>
+    
+            </div>
+            
+           
+        </div>
+
+    </section>
+        
+
+    <!--
+<section>
+        
+        <div class="sec"> BloodWork Results </div>
+        
+        <div>
+            <div>
+                <span class="c1">Cholestrol</span>
+                <span class="c2">112</span>
+            </div>
+            <div>
+                <span class="c1">HDL</span>
+                <span class="c2">39</span>
+            </div>
+            <div>
+                <span class="c1">LDL</span>
+                <span class="c2">53</span>
+            </div>
+            <div>
+                <span class="c1">A1C</span>
+                <span class="c2">5.4</span>
+            </div>
+        </div>
+    </section>
+
+        
+    -->
+    
+    
+    <section>
+        
+        <div>
+            <div class="sec">Past Surgeries</div>
+            <div>
+                <span class="c1">General</span>
+                <span class="skill"> Colon and Rectal Surgery, </span>
+            </div> 
+            <div>
+                <span class="c1">Cosmetic</span>
+                <span class="skill">Breast augmentation surgery</span>
+            </div> 
+            <div>
+                <span class="c1">Emergency</span>
+                <span class="skill">Colectomy</span>
+            </div> 
+           
+            <!--
+            <div>
+                <span class="c1">Programming Tools</span>
+                <span class="skill">vscode, make, cmake, ninja, emacs, CLion, Qt Creator, Visual Studio, Notepad++,<br/>
+                g++, gdb, clang, Tomcat 7/8, Apache httpd, IIS, <br/>
+                Intellij, Netbeans, Eclipse, ant, mvn, sh, bash
+                </span>
+            </div> 
+            <div>
+                <span class="c1">Version Control</span>
+                <span class="skill">git, mercurial, svn</span>
+            </div> 
+            <div>
+                <span class="c1">Operating Systems</span>
+                <span class="skill">Linux (Ubuntu, Redhat), MacOS X, Windows XP/7/8/8.1/10</span>
+            </div>
+            <div>
+                <span class="c1">Data Interchange</span>
+                <span class="skill">JSON, YML, XML, STL</span>
+            </div>
+            <div>
+                <span class="c1">Parallelization</span>
+                <span class="skill">C++11 threads, OpenMP, MPI, pthreads, AVX</span>
+            </div>
+            <div>
+                <span class="c1">Graphical APIs</span>
+                <span class="skill">Java Swing, OpenGL, Processing</span>
+            </div>
+            <div>
+                <span class="c1">Databases</span>
+                <span class="skill">MySQL, MongoDB, Oracle, Sybase</span>
+            </div>
+            <div>
+                <span class="c1">Embedded Systems</span>
+                <span class="skill">Arduino, Raspberry Pi</span>
+            </div>
+            <div>
+                <span class="c1">CAD</span>
+                <span class="skill">Eagle, Fritzing, LTSpice</span>
+            </div>
+            <div>
+                <span class="c1">Languages</span>
+                <span class="skill">native English speaker, conversational Hebrew and French, beginner Japanese</span>
+            </div> -->
+        </div>
+        
+    </section>
+
+    <section>
+        <div>
+            <div class="sec">Allergies</div>
+            <div>
+                <span class="c1">Food</span>
+                <span class="skill"> Shrimp, Pine Nuts </span>
+            </div> 
+            <div>
+                <span class="c1">Medication</span>
+                <span class="skill">ibuprofen</span>
+            </div> 
+            
+    
+        </div>
+            
+    </section>
+   
+
+    <!--
+    <section>
+        <div class="le"><h2>Experience</h2></div>
+    </section> -->
+    <!--
+    <footer>
+        <a href="projects.html">favorite projects</a>
+        <a href="https://github.com/stevensdeptece/DovKrugerCourses">courses taught</a>
+        <a href="https://github.com/stevensdeptece/Health">Lifestyle Health</a>
+        <a href="https://github.com/LinuxCrashCourse">Linux Crash Course</a>
+    </footer>
+    
+    -->
+    
+    </body>
+    </html>
