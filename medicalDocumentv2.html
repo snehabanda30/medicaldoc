@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical History Document</title>
+<meta charset="utf-8">
+<meta name ="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @media print {
+
+    }
+
+    *{ /*asterisk means applies to all*/
+        box-sizing: border-box; /*includes padding and border within width and height*/
+        font-family:'Times New Roman', Times, serif;
+        border-radius: 0px;
+    }
+
+    header {
+        text-align: center; 
+        margin: 10px;
+        border-bottom: 2px dashed black;
+        /*display: flex; /*auto scales elements to fit screen*/
+    }
+
+    body {
+        background-color:aliceblue;
+        margin: 10px;
+        /*border: 2px dashed black;*/
+    }
+
+    h1 {
+        color: black;
+    }
+
+    div{
+        width: auto;
+        font-size: 12pt;
+        color: black;
+        margin: 10px 0px 10px;
+    }
+
+    div.body-border {
+        border-bottom: 2px dashed black;
+        margin: 10px;
+    }
+
+    span{
+        font-size: 12pt;
+        color: black;
+    }
+    table {
+        font-size: 12pt;
+        border: 2px transparent;
+        column-gap: 10pt;
+        margin: 10px;
+    }
+    table.center{
+        width: 97%;
+        margin-right: 1%;
+    }
+    td.e {
+        text-align: center;
+    }
+    td.r {
+        text-align: right
+    }
+    div.title {
+        text-align: center;
+        font: 18pt bold;
+    }
+
+</style>
+<body>
+    <div><header><h1>Medical History</h1></header></div>
+        <div>
+            <div class="body-border">
+                <div class="title">Contact Information</div>
+                <table class="center">
+                    <tr>
+                        <td>Name:</td>
+                        <td class="r">John Smith</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td class="r">201-123-4567</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td class="r">john.smith@stevens.edu</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div>
+                    <div class="title">Bloodwork</div>
+                    <table class="center">
+                        <tr>
+                            <td>Date:</td>
+                            <td class="r">03/04/22</td>
+                            <td class="r">07/20/22</td>
+                            <td class="r">11/09/22</td>
+                        </tr>
+                        <tr>
+                            <td>Weight:</td>
+                            <td class="r">240</td>
+                            <td class="r">208.3</td>
+                            <td class="r">211</td>
+                        </tr>
+                        <tr>
+                            <td>BP:</td>
+                            <td class="r">132/83</td>
+                            <td class="r">132/83</td>
+                            <td class="r">122/79</td>
+                        </tr>
+                        <tr>
+                            <td>Cholesterol</td>
+                            <td class="r">233</td>
+                            <td class="r">112</td>
+                            <td class="r">107</td>
+                        </tr>
+                        <tr>
+                            <td>HDL:</td>
+                            <td class="r">41</td>
+                            <td class="r">42</td>
+                            <td class="r">39</td>
+                        </tr>
+                        <tr>
+                            <td>LDL:</td>
+                            <td class="r">146</td>
+                            <td class="r">53</td>
+                            <td class="r">49</td>
+                        </tr>
+                        <tr>
+                            <td>A1C:</td>
+                            <td class="r">6</td>
+                            <td class="r">5.4</td>
+                            <td class="r">5.2</td>
+                        </tr>
+                        <tr>
+                            <td>Triglycerides:</td>
+                            <td class="r">231</td>
+                            <td class="r">91</td>
+                            <td class="r">67</td>
+                        </tr>
+                    </table>
+                </div>
+            </div> 
+        </div>
+</body>
+</head>
+</html>
