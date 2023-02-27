@@ -6,7 +6,10 @@
 <meta name ="viewport" content="width=device-width, initial-scale=1">
 <style>
     @media print {
-
+        @page{
+            size: auto;
+            margin: 10%;
+        }
     }
 
     *{ /*asterisk means applies to all*/
@@ -18,7 +21,8 @@
     header {
         text-align: center; 
         margin: 10px;
-        border-bottom: 2px dashed black;
+        border: 2px solid black;
+        /*border-bottom: 2px dashed black;*/
         /*display: flex; /*auto scales elements to fit screen*/
     }
 
@@ -26,6 +30,17 @@
         background-color:aliceblue;
         margin: 10px;
         /*border: 2px dashed black;*/
+    }
+    div.Scroll {
+        overflow: scroll;
+        max-height: 250px;
+        width: 100%;
+        border: transparent;
+    }
+    div.floatingchild1, div.floatingchild2 {
+        overflow: scroll;
+        width: 48%;
+        max-height: 200px;
     }
 
     h1 {
@@ -38,15 +53,46 @@
         color: black;
         margin: 10px 0px 10px;
     }
-
-    div.body-border {
-        border-bottom: 2px dashed black;
+    
+    div.border {
+        border: 2px solid black;
         margin: 10px;
+    }
+
+    div.title {
+        text-align: center;
+        font: 18pt bold;
+    }
+    div.float-container{
+        border: 2px transparent;
+    }
+    div.float-child1{
+        width: 48%;
+        padding-bottom: 10%;
+        float: left;
+        border: 2px solid black;
+        margin: 10px;
+    }
+    div.float-child2{
+        width: 48%;
+        padding-bottom: 15%;
+        float: left;
+        border: 2px solid black;
+        margin: 10px, -20px, 10px;
+    }
+    div.left{
+        float: left;
+        width: 100%
     }
 
     span{
         font-size: 12pt;
         color: black;
+        margin-left: 10px;
+        margin-top: 5px
+    }
+    input.space{
+        margin-top: 5px;
     }
     table {
         font-size: 12pt;
@@ -64,88 +110,187 @@
     td.r {
         text-align: right
     }
-    div.title {
-        text-align: center;
-        font: 18pt bold;
+    button{
+        margin-top: 5px;
+    }
+    button:hover{
+        background-color: lightblue;
     }
 
 </style>
 <body>
     <div><header><h1>Medical History</h1></header></div>
+    <div class="border">
+        <div class="title">Contact Information</div>
+        <table class="center">
+            <tr>
+                <td>Name:</td>
+                <td class="r">John Smith</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td class="r">201-123-4567</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td class="r">john.smith@stevens.edu</td>
+            </tr>
+        </table>
+    </div>
+    <div class="float-container">
+        <div class="float-child1">
+            <div class="title">Personal Info</div>
+                <span>Sex: </span>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="intersex" name="sex" value="intersex">
+                <label for="intersex">Intersex</label><br>
+                <span>Gender: </span>
+                <input type="text" name="Gender" class="space"/><br>
+                <span>Allergies: </span>
+                <button>Penicillin</button>
+                <button>Aspirin</button><br>
+                <span>Past Surgeries/Pre-exisitng Conditions: </span>
+                <button>Congenital Heart Disease</button>
+                <button>Knee Replacement</button><br>
+                <span>Medications: </span>
+                <button>Sildenafil</button>
+                <button>Vicodin</button><br>
+        </div>
+        <div class="float-child2">
+            <div class="title">Lifestyle Choices</div>
+            <span>Drinking/Drug Habits: </span>
+            <input type="radio" id="never" name="d_d" value="never">
+            <label for="never">Never</label>
+            <input type="radio" id="rarely" name="d_d" value="rarely">
+            <label for="rarely">Rarely</label>
+            <input type="radio" id="sometimes" name="d_d" value="sometimes">
+            <label for="sometimes">Sometimes</label>
+            <input type="radio" id="always" name="d_d" value="always">
+            <label for="alwaysr">Always</label><br>
+            <span>Exercise Habits: </span>
+            <input type="radio" id="never" name="exercise" value="never">
+            <label for="never">Never</label>
+            <input type="radio" id="rarely" name="exercise" value="rarely">
+            <label for="rarely">Rarely</label>
+            <input type="radio" id="sometimes" name="exercise" value="sometimes">
+            <label for="sometimes">Sometimes</label>
+            <input type="radio" id="always" name="exercise" value="always">
+            <label for="alwaysr">Always</label><br>
+            <span>Dietary Restrictions: </span>
+            <button>Pescetarian</button>
+            <button>Halal</button><br>
+        </div>
+    </div>
+    <div class="border left">
         <div>
-            <div class="body-border">
-                <div class="title">Contact Information</div>
+            <div class="title">Bloodwork</div>
+            <div class="Scroll">
                 <table class="center">
                     <tr>
-                        <td>Name:</td>
-                        <td class="r">John Smith</td>
+                        <td>Date:</td>
+                        <td class="r">03/04/22</td>
+                        <td class="r">07/20/22</td>
+                        <td class="r">11/09/22</td>
                     </tr>
                     <tr>
-                        <td>Phone:</td>
-                        <td class="r">201-123-4567</td>
+                        <td>Weight:</td>
+                        <td class="r">240</td>
+                        <td class="r">208.3</td>
+                        <td class="r">211</td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
-                        <td class="r">john.smith@stevens.edu</td>
+                        <td>BP:</td>
+                        <td class="r">132/83</td>
+                        <td class="r">132/83</td>
+                        <td class="r">122/79</td>
+                    </tr>
+                    <tr>
+                        <td>Cholesterol</td>
+                        <td class="r">233</td>
+                        <td class="r">112</td>
+                        <td class="r">107</td>
+                    </tr>
+                    <tr>
+                        <td>HDL:</td>
+                        <td class="r">41</td>
+                        <td class="r">42</td>
+                        <td class="r">39</td>
+                    </tr>
+                    <tr>
+                        <td>LDL:</td>
+                        <td class="r">146</td>
+                        <td class="r">53</td>
+                        <td class="r">49</td>
+                    </tr>
+                    <tr>
+                        <td>A1C:</td>
+                        <td class="r">6</td>
+                        <td class="r">5.4</td>
+                        <td class="r">5.2</td>
+                    </tr>
+                    <tr>
+                        <td>Triglycerides:</td>
+                        <td class="r">231</td>
+                        <td class="r">91</td>
+                        <td class="r">67</td>
+                    </tr>
+                </table>
+                <table class="center">
+                    <tr>
+                        <td>Date:</td>
+                        <td class="r">03/04/22</td>
+                        <td class="r">07/20/22</td>
+                        <td class="r">11/09/22</td>
+                    </tr>
+                    <tr>
+                        <td>Weight:</td>
+                        <td class="r">240</td>
+                        <td class="r">208.3</td>
+                        <td class="r">211</td>
+                    </tr>
+                    <tr>
+                        <td>BP:</td>
+                        <td class="r">132/83</td>
+                        <td class="r">132/83</td>
+                        <td class="r">122/79</td>
+                    </tr>
+                    <tr>
+                        <td>Cholesterol</td>
+                        <td class="r">233</td>
+                        <td class="r">112</td>
+                        <td class="r">107</td>
+                    </tr>
+                    <tr>
+                        <td>HDL:</td>
+                        <td class="r">41</td>
+                        <td class="r">42</td>
+                        <td class="r">39</td>
+                    </tr>
+                    <tr>
+                        <td>LDL:</td>
+                        <td class="r">146</td>
+                        <td class="r">53</td>
+                        <td class="r">49</td>
+                    </tr>
+                    <tr>
+                        <td>A1C:</td>
+                        <td class="r">6</td>
+                        <td class="r">5.4</td>
+                        <td class="r">5.2</td>
+                    </tr>
+                    <tr>
+                        <td>Triglycerides:</td>
+                        <td class="r">231</td>
+                        <td class="r">91</td>
+                        <td class="r">67</td>
                     </tr>
                 </table>
             </div>
-            <div>
-                <div>
-                    <div class="title">Bloodwork</div>
-                    <table class="center">
-                        <tr>
-                            <td>Date:</td>
-                            <td class="r">03/04/22</td>
-                            <td class="r">07/20/22</td>
-                            <td class="r">11/09/22</td>
-                        </tr>
-                        <tr>
-                            <td>Weight:</td>
-                            <td class="r">240</td>
-                            <td class="r">208.3</td>
-                            <td class="r">211</td>
-                        </tr>
-                        <tr>
-                            <td>BP:</td>
-                            <td class="r">132/83</td>
-                            <td class="r">132/83</td>
-                            <td class="r">122/79</td>
-                        </tr>
-                        <tr>
-                            <td>Cholesterol</td>
-                            <td class="r">233</td>
-                            <td class="r">112</td>
-                            <td class="r">107</td>
-                        </tr>
-                        <tr>
-                            <td>HDL:</td>
-                            <td class="r">41</td>
-                            <td class="r">42</td>
-                            <td class="r">39</td>
-                        </tr>
-                        <tr>
-                            <td>LDL:</td>
-                            <td class="r">146</td>
-                            <td class="r">53</td>
-                            <td class="r">49</td>
-                        </tr>
-                        <tr>
-                            <td>A1C:</td>
-                            <td class="r">6</td>
-                            <td class="r">5.4</td>
-                            <td class="r">5.2</td>
-                        </tr>
-                        <tr>
-                            <td>Triglycerides:</td>
-                            <td class="r">231</td>
-                            <td class="r">91</td>
-                            <td class="r">67</td>
-                        </tr>
-                    </table>
-                </div>
-            </div> 
         </div>
+    </div>
 </body>
 </head>
 </html>
