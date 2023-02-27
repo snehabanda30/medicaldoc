@@ -33,14 +33,14 @@
     }
     div.Scroll {
         overflow: scroll;
-        max-height: 250px;
+        min-height: 200px;
         width: 100%;
         border: transparent;
     }
     div.floatingchild1, div.floatingchild2 {
         overflow: scroll;
         width: 48%;
-        max-height: 200px;
+        min-height: 300px;
     }
 
     h1 {
@@ -64,18 +64,22 @@
         font: 18pt bold;
     }
     div.float-container{
+        margin: auto;
+        width: 100%;
+        padding-left: 20px;
+        overflow-x: visible;
         border: 2px transparent;
     }
     div.float-child1{
         width: 48%;
-        padding-bottom: 10%;
+        min-height: 250px;
         float: left;
         border: 2px solid black;
         margin: 10px;
     }
     div.float-child2{
         width: 48%;
-        padding-bottom: 15%;
+        min-height: 250px;
         float: left;
         border: 2px solid black;
         margin: 10px, -20px, 10px;
@@ -108,7 +112,8 @@
         text-align: center;
     }
     td.r {
-        text-align: right
+        text-align: right;
+        min-width: 150px;
     }
     button{
         margin-top: 5px;
@@ -194,53 +199,6 @@
                         <td class="r">03/04/22</td>
                         <td class="r">07/20/22</td>
                         <td class="r">11/09/22</td>
-                    </tr>
-                    <tr>
-                        <td>Weight:</td>
-                        <td class="r">240</td>
-                        <td class="r">208.3</td>
-                        <td class="r">211</td>
-                    </tr>
-                    <tr>
-                        <td>BP:</td>
-                        <td class="r">132/83</td>
-                        <td class="r">132/83</td>
-                        <td class="r">122/79</td>
-                    </tr>
-                    <tr>
-                        <td>Cholesterol</td>
-                        <td class="r">233</td>
-                        <td class="r">112</td>
-                        <td class="r">107</td>
-                    </tr>
-                    <tr>
-                        <td>HDL:</td>
-                        <td class="r">41</td>
-                        <td class="r">42</td>
-                        <td class="r">39</td>
-                    </tr>
-                    <tr>
-                        <td>LDL:</td>
-                        <td class="r">146</td>
-                        <td class="r">53</td>
-                        <td class="r">49</td>
-                    </tr>
-                    <tr>
-                        <td>A1C:</td>
-                        <td class="r">6</td>
-                        <td class="r">5.4</td>
-                        <td class="r">5.2</td>
-                    </tr>
-                    <tr>
-                        <td>Triglycerides:</td>
-                        <td class="r">231</td>
-                        <td class="r">91</td>
-                        <td class="r">67</td>
-                    </tr>
-                </table>
-                <table class="center">
-                    <tr>
-                        <td>Date:</td>
                         <td class="r">03/04/22</td>
                         <td class="r">07/20/22</td>
                         <td class="r">11/09/22</td>
@@ -250,9 +208,15 @@
                         <td class="r">240</td>
                         <td class="r">208.3</td>
                         <td class="r">211</td>
+                        <td class="r">240</td>
+                        <td class="r">208.3</td>
+                        <td class="r">211</td>
                     </tr>
                     <tr>
                         <td>BP:</td>
+                        <td class="r">132/83</td>
+                        <td class="r">132/83</td>
+                        <td class="r">122/79</td>
                         <td class="r">132/83</td>
                         <td class="r">132/83</td>
                         <td class="r">122/79</td>
@@ -262,9 +226,15 @@
                         <td class="r">233</td>
                         <td class="r">112</td>
                         <td class="r">107</td>
+                        <td class="r">233</td>
+                        <td class="r">112</td>
+                        <td class="r">107</td>
                     </tr>
                     <tr>
                         <td>HDL:</td>
+                        <td class="r">41</td>
+                        <td class="r">42</td>
+                        <td class="r">39</td>
                         <td class="r">41</td>
                         <td class="r">42</td>
                         <td class="r">39</td>
@@ -274,15 +244,24 @@
                         <td class="r">146</td>
                         <td class="r">53</td>
                         <td class="r">49</td>
+                        <td class="r">146</td>
+                        <td class="r">53</td>
+                        <td class="r">49</td>
                     </tr>
                     <tr>
                         <td>A1C:</td>
                         <td class="r">6</td>
                         <td class="r">5.4</td>
                         <td class="r">5.2</td>
+                        <td class="r">6</td>
+                        <td class="r">5.4</td>
+                        <td class="r">5.2</td>
                     </tr>
                     <tr>
                         <td>Triglycerides:</td>
+                        <td class="r">231</td>
+                        <td class="r">91</td>
+                        <td class="r">67</td>
                         <td class="r">231</td>
                         <td class="r">91</td>
                         <td class="r">67</td>

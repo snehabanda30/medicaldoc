@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<title>Medical Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@media print {
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: 20pt;
+    text-align: center;
+}
+
+.border {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+table{
+    border: 2px transparent;
+}
+td.r{
+    width: 75%;
+    text-align: right;
+}
+.center{
+    margin: auto;
+    width: 100%;
+}
+.flex-container{
+    display: flex;
+}
+.flex-child{
+    flex:1;
+}
+.flex-child:first-child{
+    margin-right: 20px;
+}
+input[type=date],[type=text]{
+    min-width: 50%;
+    padding-left: 5px;
+}
+
+button:hover{
+    background-color: lightblue
+}
+
+</style>
+<body>
+    <h1 class="title border">Medical History</h1>
+    <div class="border">
+        <header class="title">Contact Information</header>
+        <table class="center">
+            <tr>
+                <td>Name:</td>
+                <td class="r">John Smith</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td class="r">201-123-4567</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td class="r">john.smith@stevens.edu</td>
+            </tr>
+        </table>
+    </div>
+    <div class="border">
+        <header class="title">Current Visit</header>
+        <span>Reason for Visit: </span>
+        <input type="text" name="reason"/><br>
+        <span>Symptoms: </span>
+        <button>Chest Pain</button>
+        <button>Dyspnea</button>
+        <button>Epigastric Pain</button>
+        <button>Low Back Pain</button>
+    </div>
+    <div class="flex-container">
+        <div class="flex-child border">
+            <header class="title">Personal Information</header>
+            <span>Date of Birth: </span>
+            <input type="date" name="birthdate"/><br>
+            <span>Sex: </span>
+            <input type="radio" id="male" name="sex" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Female</label>                <input type="radio" id="intersex" name="sex" value="intersex">
+            <label for="intersex">Intersex</label><br>
+            <span>Gender: </span>
+            <input type="text" name="Gender" class="space"/><br>
+        </div>
+        <div class="flex-child border">
+            <header class="title">Habits</header>
+        </div>
+    </div>    
+</body>
+</head>
+</html>
