@@ -11,9 +11,9 @@
 
 *{
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
-    color: lavender;
-    border-radius: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgrey;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
@@ -27,7 +27,6 @@ body{
 }
 
 .border {
-    border: 2px solid #faf9f6;
     background-color: #121212;
     padding: 10px;
 }
@@ -56,25 +55,33 @@ td.r{
     margin-right: 20px;
 }
 input[type=date],[type=text]{
-    background-color:lavender;
+    background-color:lightgrey;
     color: #121212;
     min-width: 50%;
     padding-left: 5px;
 }
 
 button:hover{
-    background-color: lightblue
+    background-color: lightcoral;
+}
+input:hover{
+    background-color: lightcoral;
 }
 button{
     color: #121212;
-    background-color: lavender;
+    background-color: lightgrey;
 }
 .scroll{
     overflow: scroll;
     max-height: 200px;
     width: 100%;
 }
-
+.headcol{
+    position: absolute;
+    background-color:#121212;
+    width: 5em;
+    top: auto;
+}
 </style>
 <body>
     <h1 class="title border">Medical History</h1>
@@ -183,7 +190,7 @@ button{
         <div class="scroll">
             <table class="center">
                 <tr>
-                    <td>Date:</td>
+                    <td class="headcol">Date:</td>
                     <td class="r min-width">03/04/22</td>
                     <td class="r min-width">07/20/22</td>
                     <td class="r min-width">11/09/22</td>
@@ -192,7 +199,7 @@ button{
                     <td class="r min-width">11/09/22</td>
                 </tr>
                 <tr>
-                    <td>Weight:</td>
+                    <td class="headcol">Weight:</td>
                     <td class="r min-width">240</td>
                     <td class="r min-width">208.3</td>
                     <td class="r min-width">211</td>
@@ -201,7 +208,7 @@ button{
                     <td class="r min-width">211</td>
                 </tr>
                 <tr>
-                    <td>BP:</td>
+                    <td class="headcol">BP:</td>
                     <td class="r min-width">132/83</td>
                     <td class="r min-width">132/83</td>
                     <td class="r min-width">122/79</td>
@@ -210,7 +217,7 @@ button{
                     <td class="r min-width">122/79</td>
                 </tr>
                 <tr>
-                    <td>Cholesterol</td>
+                    <td class="headcol">Cholesterol</td>
                     <td class="r min-width">233</td>
                     <td class="r min-width">112</td>
                     <td class="r min-width">107</td>
@@ -219,7 +226,7 @@ button{
                     <td class="r min-width">107</td>
                 </tr>
                 <tr>
-                    <td>HDL:</td>
+                    <td class="headcol">HDL:</td>
                     <td class="r min-width">41</td>
                     <td class="r min-width">42</td>
                     <td class="r min-width">39</td>
@@ -228,7 +235,7 @@ button{
                     <td class="r min-width">39</td>
                 </tr>
                 <tr>
-                    <td>LDL:</td>
+                    <td class="headcol">LDL:</td>
                     <td class="r min-width">146</td>
                     <td class="r min-width">53</td>
                     <td class="r min-width">49</td>
@@ -237,7 +244,7 @@ button{
                     <td class="r min-width">49</td>
                 </tr>
                 <tr>
-                    <td>A1C:</td>
+                    <td class="headcol">A1C:</td>
                     <td class="r min-width">6</td>
                     <td class="r min-width">5.4</td>
                     <td class="r min-width">5.2</td>
@@ -246,7 +253,7 @@ button{
                     <td class="r min-width">5.2</td>
                 </tr>
                 <tr>
-                    <td>Triglycerides:</td>
+                    <td class="headcol">Triglycerides:</td>
                     <td class="r min-width">231</td>
                     <td class="r min-width">91</td>
                     <td class="r min-width">67</td>
