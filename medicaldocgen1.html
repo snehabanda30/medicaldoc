@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<title>Medical Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@media print {
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: 20pt;
+    text-align: center;
+}
+
+.border {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+table{
+    border: 2px transparent;
+}
+td.r{
+    width: 75%;
+    text-align: right;
+}
+.min-width{
+    min-width: 175px;
+}
+.center{
+    margin: auto;
+    width: 100%;
+}
+.flex-container{
+    display: flex;
+}
+.flex-child{
+    flex:1;
+}
+.flex-child:first-child{
+    margin-right: 20px;
+}
+input[type=date],[type=text]{
+    min-width: 50%;
+    padding-left: 5px;
+}
+
+button:hover{
+    background-color: lightblue
+}
+.scroll{
+    overflow: scroll;
+    max-height: 200px;
+    width: 100%;
+}
+
+</style>
+<body>
+    <h1 class="title border">Medical History</h1>
+    <div class="border">
+        <header class="title">Contact Information</header>
+        <table class="center">
+            <tr>
+                <td>Name:</td>
+                <td class="r">John Smith</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td class="r">201-123-4567</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td class="r">john.smith@stevens.edu</td>
+            </tr>
+        </table>
+    </div>
+    <div class="border">
+        <header class="title">Current Visit</header>
+        <span>Reason for Visit: </span>
+        <input type="text" name="reason"/><br>
+        <span>Referral: </span>
+        <input type="radio" id="physician" name="ref" value="physician"/>
+        <label for="physician">Physician</label>
+        <input type="radio" id="emergency" name="ref" value="emergency"/>
+        <label for="emergency">Emergency Room</label><br>
+        <span>Symptoms: </span>
+        <button>Chest Pain</button>
+        <button>Dyspnea</button>
+        <button>Epigastric Pain</button>
+        <button>Low Back Pain</button>
+    </div>
+    <div class="flex-container">
+        <div class="flex-child border">
+            <header class="title">Personal Information</header>
+            <span>Date of Birth: </span>
+            <input type="date" name="birthdate"/><br>
+            <span>Sex: </span>
+            <input type="radio" id="male" name="sex" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Female</label>                <input type="radio" id="intersex" name="sex" value="intersex">
+            <label for="intersex">Intersex</label><br>
+            <span>Gender: </span>
+            <input type="text" name="Gender" class="space"/><br>
+            <span>Past Surgeries/Pre-existing Conditions: </span>
+            <button>Hypertension</button>
+            <button>Peptic Ulcer Disease</button>
+            <button>Bunionectomy</button>
+            <button>Knee Replacement</button><br>
+            <span>Family History: </span>
+            <button>Hypertension</button>
+            <button>Diabetes</button>
+            <button>Glaucoma</button><br>
+            <span>Allergies: </span>
+            <button>Penicillin</button><br>
+            <span>Medications: </span>
+            <button>Ibuprofen</button><br>
+        </div>
+        <div class="flex-child border">
+            <header class="title">Habits</header>
+            <span>Alcohol Consumption: </span>
+            <input type="radio" id="never" name="aa" value="never">
+            <label for="never">Never</label>
+            <input type="radio" id="rarely" name="aa" value="rarely">
+            <label for="rarely">Rarely</label>
+            <input type="radio" id="sometimes" name="aa" value="sometimes">
+            <label for="sometimes">Sometimes</label>
+            <input type="radio" id="always" name="aa" value="always">
+            <label for="always">Always</label><br>
+            <span>Caffeine Consumption: </span>
+            <label for="never">Never</label>
+            <input type="radio" id="rarely" name="cc" value="rarely">
+            <label for="rarely">Rarely</label>
+            <input type="radio" id="sometimes" name="cc" value="sometimes">
+            <label for="sometimes">Sometimes</label>
+            <input type="radio" id="always" name="cc" value="always">
+            <label for="always">Always</label><br>
+            <span>Tobacco Consumption: </span>
+            <input type="radio" id="never" name="tc" value="never">
+            <label for="never">Never</label>
+            <input type="radio" id="rarely" name="tc" value="rarely">
+            <label for="rarely">Rarely</label>
+            <input type="radio" id="sometimes" name="tc" value="sometimes">
+            <label for="sometimes">Sometimes</label>
+            <input type="radio" id="always" name="tc" value="always">
+            <label for="always">Always</label><br>
+            <span>Do you smoke? </span>
+            <input type="radio" id="yes" name="sm" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="no" value="no">
+            <label for="no">No</label><br>
+            <span>Recreational/Illegal Drug Use: </span>
+            <button>Marijuana</button><br>
+            <span>Diet: </span>
+            <button>Low-Fat</button>
+            <button>Pescetarian</button><br>
+        </div>
+    </div>
+    <div class="border">
+        <header class="title">Bloodwork</header>
+        <div class="scroll">
+            <table class="center">
+                <tr>
+                    <td>Date:</td>
+                    <td class="r min-width">03/04/22</td>
+                    <td class="r min-width">07/20/22</td>
+                    <td class="r min-width">11/09/22</td>
+                    <td class="r min-width">03/04/22</td>
+                    <td class="r min-width">07/20/22</td>
+                    <td class="r min-width">11/09/22</td>
+                </tr>
+                <tr>
+                    <td>Weight:</td>
+                    <td class="r min-width">240</td>
+                    <td class="r min-width">208.3</td>
+                    <td class="r min-width">211</td>
+                    <td class="r min-width">240</td>
+                    <td class="r min-width">208.3</td>
+                    <td class="r min-width">211</td>
+                </tr>
+                <tr>
+                    <td>BP:</td>
+                    <td class="r min-width">132/83</td>
+                    <td class="r min-width">132/83</td>
+                    <td class="r min-width">122/79</td>
+                    <td class="r min-width">132/83</td>
+                    <td class="r min-width">132/83</td>
+                    <td class="r min-width">122/79</td>
+                </tr>
+                <tr>
+                    <td>Cholesterol</td>
+                    <td class="r min-width">233</td>
+                    <td class="r min-width">112</td>
+                    <td class="r min-width">107</td>
+                    <td class="r min-width">233</td>
+                    <td class="r min-width">112</td>
+                    <td class="r min-width">107</td>
+                </tr>
+                <tr>
+                    <td>HDL:</td>
+                    <td class="r min-width">41</td>
+                    <td class="r min-width">42</td>
+                    <td class="r min-width">39</td>
+                    <td class="r min-width">41</td>
+                    <td class="r min-width">42</td>
+                    <td class="r min-width">39</td>
+                </tr>
+                <tr>
+                    <td>LDL:</td>
+                    <td class="r min-width">146</td>
+                    <td class="r min-width">53</td>
+                    <td class="r min-width">49</td>
+                    <td class="r min-width">146</td>
+                    <td class="r min-width">53</td>
+                    <td class="r min-width">49</td>
+                </tr>
+                <tr>
+                    <td>A1C:</td>
+                    <td class="r min-width">6</td>
+                    <td class="r min-width">5.4</td>
+                    <td class="r min-width">5.2</td>
+                    <td class="r min-width">6</td>
+                    <td class="r min-width">5.4</td>
+                    <td class="r min-width">5.2</td>
+                </tr>
+                <tr>
+                    <td>Triglycerides:</td>
+                    <td class="r min-width">231</td>
+                    <td class="r min-width">91</td>
+                    <td class="r min-width">67</td>
+                    <td class="r min-width">231</td>
+                    <td class="r min-width">91</td>
+                    <td class="r min-width">67</td>
+                </tr>
+            </table>    
+        </div>
+    </div>    
+</body>
+</head>
+</html>
